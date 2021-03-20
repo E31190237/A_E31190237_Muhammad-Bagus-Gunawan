@@ -6,7 +6,6 @@
     <title>Contact</title>
 </head>
 <body>
-    <h1>iki contact</h1>
-    <p>Okaerinasai (お帰りなさい),ini adalah halaman contact </p>
+    <h1>お帰りなさい okaerinasai, ini contact</h1>
 </body>
 </html>

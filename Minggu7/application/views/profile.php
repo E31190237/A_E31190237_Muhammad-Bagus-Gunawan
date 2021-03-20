@@ -6,7 +6,6 @@
     <title>Profile</title>
 </head>
 <body>
-    <h1>iki profile</h1>
-    <p>Irasshaimase (いらっしゃいませ)),ini adalah halaman profile </p>
+    <h1>おはよう Ohayo, ini profile</h1>
 </body>
 </html>
