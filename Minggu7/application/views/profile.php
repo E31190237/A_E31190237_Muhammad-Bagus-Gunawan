@@ -6,6 +6,7 @@
     <title>Profile</title>
 </head>
 <body>
-    <h1>おはよう Ohayo, ini profile</h1>
+    <h1>おはよう Ohayo, </h1>
+    <h2>ini profile</h2>
 </body>
 </html>

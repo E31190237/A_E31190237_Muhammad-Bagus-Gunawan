@@ -6,6 +6,7 @@
     <title>Contact</title>
 </head>
 <body>
-    <h1>お帰りなさい okaerinasai, ini contact</h1>
+    <h1>お帰りなさい okaerinasai,</h1>
+    <h2> ini contact</h2>>
 </body>
 </html>
