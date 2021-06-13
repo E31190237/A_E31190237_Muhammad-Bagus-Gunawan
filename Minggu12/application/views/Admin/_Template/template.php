@@ -1,6 +1,10 @@
+<?php
+$getUser = $this->session->userdata('session_user');
+$getGrup = $this->session->userdata('session_grup');
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php echo $head; ?> 
+<?php echo $head;  ?>
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -56,7 +60,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="<?= base_url('Login/logout');?>">Logout</a>
                 </div>
             </div>
         </div>

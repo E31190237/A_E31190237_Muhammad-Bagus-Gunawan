@@ -1,3 +1,7 @@
+<?php
+$getUser = $this->session->userdata('session_user');
+$getGrup = $this->session->userdata('session_grup');
+?>
 <head>
     <title>User</title>
 </head>
@@ -21,9 +25,8 @@
                         <th>Password</th>
                         <th>Nama</th>
                         <th>Grup</th>
-                        <!-- <th>&nbsp</th> -->
-                    </tr>
-</thead>
+                        </tr>
+            </thead>
                 <tfoot>
                     <tbody>
                         <?php 
@@ -37,12 +40,16 @@
                             <td><?php echo $baris->password; ?></td>
                             <td><?php echo $baris->nama; ?></td>
                             <td><?php echo $baris->grup; ?></td>
-                            <!-- <td>
-                <center>
-                  <a href="update.php?id=<?php //echo $d['id']; ?>" class="btn btn-warning" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <a href="delete.php?id=<?php //echo $d['id']; ?>" class="btn btn-danger" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                </center>
-              </td> -->
+                            
+                            <td>
+                            <?php 
+                            if($getGrup==1) {
+                                echo '<a href="'.base_url('Mahasiswa/edit/'.$baris->id).'" class="btn btn-warning fa fa-edit" role="button">';
+                                 echo " ";
+                                 echo '<a href="'.base_url('Mahasiswa/hapus/'.$baris->id).'"  class="btn btn-danger fa fa-times" role="button">';
+                            } ?>
+
+              </td> 
                         </tr>
                         <?php } ?>
                     </tbody>

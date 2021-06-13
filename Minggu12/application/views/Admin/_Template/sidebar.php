@@ -1,4 +1,10 @@
  <!-- Sidebar -->
+<?php 
+
+$getUser = $this->session->userdata('session_user');
+$getGrup = $this->session->userdata('session_grup');
+
+?>
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
@@ -27,21 +33,32 @@
                 Interface
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
+            <?php
+        if($getGrup==1) {
+        echo '
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-table "></i>
+            <span>Data</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="'.base_url('Mahasiswa').'">User</a>
+                <a class="collapse-item" href="'.base_url('Grup').'">Grup</a>
+            </div>
+        </div>
+    </li>
+     ';}?>
+
+
+    <?php
+        if($getGrup==2) {
+        echo '<li class="nav-item">
+                    <a class="nav-link" href="Mahasiswa">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>User</span></a>
+                    </li>';}?>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
